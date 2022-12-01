@@ -34,24 +34,6 @@ public class SmartWord
          //    String line = reader.nextLine().toLowerCase();
          //    root.insert(line);
          // }
-         
-         File file = new File("trump_old.txt");
-         Scanner reader = new Scanner(file);
-         while (reader.hasNextLine()) {
-            // splits words by whitespace - deals with weird white spacing
-            String[] words = reader.nextLine().replaceAll("\\s+", " ").split(" ");
-            // iterate through words
-            for (int i = 0; i < words.length; i++) {
-               // gets rid of numbers and punctuation
-               words[i] = words[i].replaceAll("[^a-zA-Z]", "");
-               // gets rid of empty strings that occasional occur
-               if (words[i].equals("")) {
-                  continue;
-               }
-               // System.out.println(words[i]);
-               root.insert(words[i]);
-            }
-         }
       }
 
       // temp function to test class
